@@ -1,0 +1,44 @@
+//
+// Pagination
+// --------------------------------------------------
+.wpsl-pagination-button {
+	float: left;
+	&.button-previous {
+		margin-right: 10px;
+	}
+}
+
+.wpsl-results-current-count {
+	opacity: .5;
+}
+
+.wpsl-form-page-selection {
+	clear: both;
+	padding-top: 1em;
+	font-style: oblique;
+	opacity: .5;
+}
+
+.wpsl-pagination {
+	@include clearfix;
+}
+
+.wpsl-jump-to-page-form {
+	float: right;
+	.current-page,
+	.total-pages {
+		display: inline-block;
+		margin: 0;
+	}
+	button[type="submit"]{
+		display: inline-block;
+		float: none;
+		margin-left: 8px;
+	}
+	input[type="tel"]{
+		display: inline-block;
+		width: 50px;
+		text-align: center;
+		margin: 0 3px;
+	}
+}

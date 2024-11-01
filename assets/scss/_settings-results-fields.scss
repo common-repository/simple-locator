@@ -1,0 +1,42 @@
+//
+// Settings - Results Fields
+// --------------------------------------------------
+.wpsl-results-field-selector {
+	background-color: rgba($black, .05);
+	border: 1px solid $border-light;
+	padding: 8px;
+	@include clearfix;
+	.left, .right {
+		width: 48%;
+		position: relative;
+		float: left;
+		padding-right: 55px;
+		box-sizing: border-box;
+		@include clearfix;
+		label {
+			display: block;
+		}
+		select {
+			float: left;
+			width: 100%;
+		}
+		button {
+			position: absolute;
+			width: 50px;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.right {
+		float: right;
+	}
+}
+
+.wpsl-limit-setting {
+	input[type="text"]{
+		width: 100%;
+	}
+}
+
+
+

@@ -1,0 +1,94 @@
+//
+// Map Style Choices
+// --------------------------------------------------
+.wpsl-settings {
+	.map-styles-header {
+		padding: 1em;
+		h3 {
+			margin: 0 0 8px 0;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+.wpsl-settings-map-style-choice {
+	ul {
+		@include unstyled;
+		@include clearfix;
+		padding: 1em 1em 1em 0;
+		max-height: 400px;
+		overflow: auto;
+	}
+	li {
+		float: left;
+		width: 48%;
+		margin: 0 0 2em 0;
+		box-sizing: border-box;
+		clear: both;
+		&:nth-child(even){
+			float: right;
+			clear: none;
+		}
+		.map {
+			display: block;
+			width: 100%;
+			height: 150px;
+			background-repeat: no-repeat;
+			background-size: 40px;
+			background-position: center;
+			box-sizing: border-box;
+			transition: all 200ms ease;
+		}
+		h4 {
+			margin: 0;
+			background-color: $gray-lighter;
+			border: 1px solid $border-light;
+			border-bottom: 0;
+			padding: 5px;
+			text-align: center;
+			font-weight: normal;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-size: .9em;
+		}
+		.choose-style {
+			display: block;
+			text-align: center;
+			background-color: darken(#fff, 50%);
+			padding: 8px 0;
+			color: #fff;
+			text-decoration: none;
+			transition: all 200ms ease;
+			box-sizing: border-box;
+			&:focus, &:active {
+				outline: none;
+				box-shadow: none;
+			}
+			&:hover {
+				background-color: #0074a2;
+			}
+		}
+		&.active {
+			.map {
+				border: 4px solid #0074a2;
+				border-bottom: 0;
+				transition: all 200ms ease;
+			}
+			.choose-style {
+				border: 4px solid #0074a2;
+				border-top: 0;
+				border-bottom: 0;
+				background-color: #0074a2;
+			}
+		}
+	}
+} // wpsl-map-style-choices
+.wpsl-settings-map-style-custom {
+	padding-top: 1em;
+	.wpsl-alert {
+		margin: 0;
+	}
+}
+
+

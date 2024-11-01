@@ -1,0 +1,1 @@
+jQuery(function(n){n(document).ready(function(){}),n(document).on("change","#wpsl_map_styles_type",function(){n(this).val()}),n(document).on("change","#wpsl_custom_map_options",function(){n(this).is(":checked")?n("#wpsl_map_options").show():n("#wpsl_map_options").hide()})});

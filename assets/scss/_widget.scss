@@ -1,0 +1,25 @@
+//
+// Widget Specific Styles
+// --------------------------------------------------
+.simple-locator-widget {
+
+	.simple-locator-form { 
+		.address-input, .distance {
+			float: none;
+			width: 100%;
+		}
+		.address-input {
+			margin-bottom: 10px;
+		}
+	}
+	
+	.wpsl-results ul li {
+		float: none;
+		width: 100%;
+	}
+
+	.geo_button_cont {
+		margin: 0;
+	}
+
+}

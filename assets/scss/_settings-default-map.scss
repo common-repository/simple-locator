@@ -1,0 +1,28 @@
+//
+// Default Map Settings
+// --------------------------------------------------
+.wpsl-settings .row .wpsl-default-map {
+	.search-form {
+		@include clearfix;
+		position: relative;
+		padding: 8px 90px 8px 8px;
+		background-color: $gray-lighter;
+		border: 1px solid $border;
+	}
+	input[type="text"]{
+		float: left;
+		height: 28px;
+		margin: 0;
+	}
+	button {
+		position: absolute;
+		width: 77px;
+		right: 8px;
+	}
+}
+
+#wpsl-default {
+	clear: both;
+	height: 250px;
+	width: 100%;
+}

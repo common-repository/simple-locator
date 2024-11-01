@@ -1,0 +1,16 @@
+//
+// Maps
+// --------------------------------------------------
+.wpsl-map {
+	clear: both;
+	width: 100%;
+	height: 250px;
+	margin: 20px 0px;
+	img {
+		width: auto;
+		max-width: none !important;
+	}
+	&.loading {
+		display: none;
+	}
+}

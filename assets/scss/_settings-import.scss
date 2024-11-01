@@ -1,0 +1,385 @@
+//
+// Import Styles
+// --------------------------------------------------
+.wpsl-step-title {
+	font-size: 1.1em;
+	padding: 1em;
+	background-color: $white;
+	border: 1px solid $border;
+	border-left: 4px solid $blue;
+}
+
+// Step 1 Notice
+.import-notice {
+	border-left: 3px solid $red;
+	background-color: darken($white, 8%);
+	padding: 8px;
+}
+
+.wpsl-import-test {
+	padding-top: 1em;
+}
+
+// General Information
+.wpsl-begin-import-header {
+	margin: 1.5em 0 -10px 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 2em;
+	font-weight: normal;
+}
+.wpsl-previous-imports-header {
+	margin: 2.5em 0 -10px 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.wpsl-import-general-information {
+	background-color: $white;
+	border: 1px solid $border-light;
+	border-radius: 2px;
+	padding: 1em;
+	margin-top: 2em;
+	.wpsl-info {
+		margin-bottom: .5em;
+	}
+	h4 {
+		font-size: 1.2em;
+		padding: 0;
+		margin: 0 0 .75em 0;
+	}
+	ul {
+		@include unstyled;
+		@include clearfix;
+		li {
+			margin: 1em 0 0 0;
+			float: left;
+			width: 100%;
+			// padding-right: 3.3333333333333335%;
+		}
+	}
+	h5 {
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+// File Upload - Step 1
+.wpsl-upload-form {
+	padding: 1em;
+	background-color: $white;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	.import-type-selection {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		h5 {
+			font-size: 1em;
+			margin: 0;
+		}
+		.type-radios {
+			@include clearfix;
+			padding: 5px;
+			background-color: darken($white, 6%);
+			max-width: 300px;
+		}
+		input[type="radio"]{
+			display: none;
+			&:checked + label {
+				background-color: $blue;
+				color: $white;
+				font-weight: bold;
+				border-radius: 2px;
+			}
+		}
+		label {
+			background-color: darken($white, 6%);
+			padding: 1em;
+			font-weight: normal;
+			text-align: center;
+			color: darken($white, 55%);
+			margin: 0;
+		}
+		.choice {
+			float: left;
+			width: 50%;
+		}
+	} // .import-type-selection
+	.import-post-type {
+		@include clearfix;
+		margin-bottom: 1em;
+		.type-select {
+			float: left;
+			width: 50%;
+		}
+		.non-public-select {
+			float: right;
+			width: 45%;
+			position: relative;
+			top: 2em;
+		}
+	}
+	label {
+		display: block;
+		font-weight: bold;
+		margin: 0 0 5px 0;
+		&.inline {
+			font-weight: normal;
+		}
+	}
+	.post-type-public {
+		font-weight: normal;
+		margin-bottom: 1em;
+	}
+	select {
+		margin: 0 0 1em 0;
+		width: 100%;
+	}
+	input[type="file"]{
+		margin-bottom: 1em;
+	}
+	.file {
+		background-color: rgba($black, .06);
+		padding: 1em;
+		margin-bottom: 2em;
+	}
+}
+
+// Previous Import Message
+.wpsl-previous-import-message {
+	padding: 1em;
+	box-sizing: border-box;
+	.button-primary {
+		margin-left: 1em;
+	}
+}
+
+
+// Row Selection - Step 2
+.wpsl-row-selection {
+	padding: 1em;
+	button {
+		.dashicons {
+			position: relative;
+			top: 3px;
+		}
+	}
+	.wpsl-current-row {
+		position: relative;
+		top: 4px;
+		margin: 0px 0 0 10px;
+	}
+}
+
+.wpsl-required-key {
+	font-style: oblique;
+	p {
+		margin: 0;
+		line-height: 1.3;
+	}
+}
+
+// Select fields for column mapping
+.wpsl-column-selection {
+	padding: 1em;
+	.column-selection-inner {
+		background-color: rgba($black, .06);
+		border: 1px solid $border;
+	}
+	ul {
+		background-color: $white;
+		margin: 0;
+	}
+	li {
+		border-top: 1px solid darken($white, 8%);
+		padding: 10px;
+		margin: 0;
+		@include clearfix;
+		span {
+			float: left;
+			width: 200px;
+			margin: 0 15px 0 0;
+		}
+		&.wpsl-import-header {
+			font-weight: bold;
+		}
+	}
+	select,
+	.unique-field {
+		margin: 0 15px 0 0;
+		float: left;
+		width: 200px;
+	}
+	.unique-field {
+		position: relative;
+		top: 4px;
+	}
+}
+
+// Inline errors
+.wpsl-column-error {
+	display: none;
+	color: $red;
+	font-style: oblique;
+	margin-bottom: 5px;
+}
+
+// Indicator Wrapper 
+.wpsl-import-indicator,
+.wpsl-loading-settings {
+	display: none;
+	height: 50px;
+}
+
+
+// Progress Indicator - Step 3
+.wpsl-import-indicator {
+	height: auto;
+	background-color: $white;
+	padding: 1em;
+	border: 1px solid $border-light;
+}
+.wpsl-import-progress {
+	position: relative;
+	.progress-bar-bg {
+		width: 100%;
+		position: relative;
+		background-color: darken($white, 10%);
+		display: block;
+		z-index: 1;
+		height: 40px;
+		border-radius: 4px;
+	}
+	p {
+		padding-top: 20px;
+		margin: 0;
+	}
+	.progress-bar {
+		z-index: 2;
+		width: 0;
+		position: absolute;
+		display: block;
+		height: 40px;
+		border-radius: 2px;
+		background-color: $blue;
+		transition: all 1000ms ease;
+		background-image: linear-gradient(
+			center bottom,
+			rgb(43, 194, 83) 37%,
+			rgb(84, 240, 84) 69%
+		);
+		position: relative;
+		overflow: hidden;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-image: linear-gradient(
+				-45deg,
+				rgba($black, 0.1) 25%,
+				transparent 25%,
+				transparent 50%,
+				rgba($black, 0.1) 50%,
+				rgba($black, 0.1) 75%,
+				transparent 75%,
+				transparent
+			);
+			z-index: 1;
+			background-size: 50px 50px;
+			animation: wpslLoadingBar 2s linear infinite;
+			border-radius: 2px;
+			overflow: hidden;
+		}
+	} // .progress-percentage
+}
+
+.wpsl-import-add-field {
+	border-top: 1px solid $border-light;
+	padding: 1em;
+}
+
+.wpsl-columns-submit {
+	border-top: 1px solid $border-light;
+	padding: 1em;
+}
+
+// Error Log
+.wpsl-import-details {
+	clear: both;
+	table {
+		background-color: $white;
+		border-collapse: collapse;
+		width: 100%;
+		border: 1px solid darken($white, 12%);
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border: 1px solid darken($white, 10%);
+		}
+		th {
+			background-color: $black;
+			color: $white;
+			border-color: darken($white, 70%);
+		}
+	}
+	h4 {
+		color: $white;
+		margin: 0;
+		background-color: $red;
+		padding: 8px;
+	}
+}
+
+
+// Last Row Imported Table - Step 1
+.wpsl-last-row-imported {
+	h4 {
+		background-color: darken($white, 70%);
+		margin: 0;
+		color: $white;
+		padding: 8px;
+	}
+	table {
+		background-color: $white;
+		width: 100%;
+		border: 0;
+		border-collapse: collapse;
+		th, td {
+			text-align: left;
+			border-left: 1px solid darken($white, 8%);
+			padding: 5px;
+			&:first-child {
+				border-left: 0;
+			}
+		}
+		th {
+			border-bottom: 1px solid darken($white, 8%);
+			border-left-color: darken($white, 15%);
+			background-color: darken($white, 10%);
+		}
+	}
+}
+
+
+@keyframes wpslLoadingBar {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+
+
+
+

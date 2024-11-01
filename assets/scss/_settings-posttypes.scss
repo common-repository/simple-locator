@@ -1,0 +1,75 @@
+//
+// Post Type Settings
+// --------------------------------------------------
+.latlng {
+	background-color: rgba($black, .08);
+	padding: 20px;
+	margin-top: 20px;
+	@include clearfix;
+}
+
+.wpsl-show-hidden {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.wpsl-left-field,
+.wpsl-right-field {
+	float: left;
+	width: 45%;
+	select {
+		width: 100%;
+	}
+	label {
+		margin: 0;
+	}
+}
+
+.wpsl-degree-info {
+	clear: both;
+	padding-top: 15px;
+	margin: 0;
+	font-style: oblique;
+}
+
+.wpsl-right-field {
+	float: right;
+}
+
+.wpsl-posttype-settings-labels {
+	.post-type-row {
+		display: table;
+		width: 100%;
+		padding: .5em;
+		border-top: 1px solid $border-light;
+		box-sizing: border-box;
+		&:first-child {
+			border: 0;
+		}
+	}
+	label {
+		display: table-cell;
+		width: 30%;
+	}
+	.post-type-field {
+		display: table-cell;
+		width: 70%;
+	}
+}
+
+.wpsl-red {
+	color: $red;
+}
+
+.wpsl-acf-map-setting {
+	@extend .latlng;
+	h3 {
+		font-size: 16px;
+		margin-top: 0;
+	}
+	select {
+		width: 100%;
+	}
+}
+
+
